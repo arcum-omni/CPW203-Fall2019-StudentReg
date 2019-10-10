@@ -1,4 +1,3 @@
-"use strict";
 /**
  * Represents a institution's student
  */
@@ -20,6 +19,15 @@ function processForm() {
     var nextStu = getStudentFromForm();
     displayStudent(nextStu);
     clearForm(); // in preperation to enter next student
+}
+function displayStudent(s) {
+    // create LI element
+    var newItem = document.createElement("li");
+    newItem.innerText = s.firstName + " " + s.lastName;
+    var displaySection = document.querySelector("#student-list");
+    var list = displaySection.querySelector("ul");
+    // Add <li> as a child to <ul>
+    list.appendChild(newItem);
 }
 function getStudentFromForm() {
     var tempStu = new Student();

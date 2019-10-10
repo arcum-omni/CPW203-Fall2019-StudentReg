@@ -43,6 +43,17 @@ function processForm(){
     clearForm(); // in preperation to enter next student
 }
 
+function displayStudent(s:Student):void{ // void, no return type
+    // create LI element
+    let newItem = document.createElement("li");
+    newItem.innerText = s.firstName + " " + s.lastName;
+    let displaySection = document.querySelector("#student-list");
+    let list = displaySection.querySelector("ul");
+    
+    // Add <li> as a child to <ul>
+    list.appendChild(newItem);
+}
+
 function getStudentFromForm():Student{ // :Student is a return type
     let tempStu = new Student();
     tempStu.firstName = getInputValue("first-name");
