@@ -25,9 +25,9 @@ class Student{
     }*/
 }
 
-
 // window.onload = function(){
-//
+//     let regBtn = document.querySelector("button");
+//     regBtn.onclick = processForm; // () to call function, not needed to establish one
 // }
 
 window.onload = main;
@@ -63,6 +63,10 @@ function getStudentFromForm():Student{ // :Student is a return type
     tempStu.program = getInputValue("program");
     console.log(tempStu);
     return tempStu;
+}
+
+function clearForm(){
+    window.location.reload(true);
 }
 
 function getInputValue(id:string):string{
