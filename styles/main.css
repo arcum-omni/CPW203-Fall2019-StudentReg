@@ -1,0 +1,18 @@
+body{
+    align-content: center;
+    width: 800px;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+    background-color: royalblue;
+    border-radius: 10px;
+    color: lightgray;
+    padding: .5em;
+    margin-top: 0em;
+}
+
+span{
+    color: red;
+}
