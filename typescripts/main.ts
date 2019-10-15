@@ -30,7 +30,8 @@ class Student{
 const programAttr = "data-program";
 
 // window.onload = function(){
-//
+//     let regBtn = document.querySelector("button");
+//     regBtn.onclick = processForm; // () to call function, not needed to establish one
 // }
 window.onload = main;
 function main(){
@@ -45,6 +46,24 @@ function processForm(){
     displayStudent(nextStu);
     clearForm(); // in preperation to enter next student
 }
+
+
+/**
+ * Clears textboxes on form upon submission
+ */
+function clearForm(){
+    let allTextBoxes = document.querySelectorAll("input[type=text]");
+    
+    for(let i = 0; i < allTextBoxes.length; i++){
+        let currBox = <HTMLInputElement>allTextBoxes[i];
+        currBox.value = "";
+    }
+}
+
+// let allTextBoxes:NodeListOf<HTMLInputElement> = document.querySelectorAll("form input[type=text]");
+// for (let currBox of allTextBoxes) {
+//         currBox.value = "";
+// }
 
 
 function displayStudent(stu:Student):void{ // void, no return type

@@ -9,7 +9,8 @@ var Student = /** @class */ (function () {
 // Constants
 var programAttr = "data-program";
 // window.onload = function(){
-//
+//     let regBtn = document.querySelector("button");
+//     regBtn.onclick = processForm; // () to call function, not needed to establish one
 // }
 window.onload = main;
 function main() {
@@ -22,6 +23,20 @@ function processForm() {
     displayStudent(nextStu);
     clearForm(); // in preperation to enter next student
 }
+/**
+ * Clears textboxes on form upon submission
+ */
+function clearForm() {
+    var allTextBoxes = document.querySelectorAll("input[type=text]");
+    for (var i = 0; i < allTextBoxes.length; i++) {
+        var currBox = allTextBoxes[i];
+        currBox.value = "";
+    }
+}
+// let allTextBoxes:NodeListOf<HTMLInputElement> = document.querySelectorAll("form input[type=text]");
+// for (let currBox of allTextBoxes) {
+//         currBox.value = "";
+// }
 function displayStudent(stu) {
     // create LI element
     var newItem = document.createElement("li");
