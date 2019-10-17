@@ -16,3 +16,7 @@ h1{
 span{
     color: red;
 }
+
+input::-webkit-input-placeholder{
+    color: grey;
+}
