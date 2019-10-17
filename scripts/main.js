@@ -65,8 +65,7 @@ function showStudentData() {
     var program = currListItem.getAttribute(programAttr);
     // alert(name + " is studying " + program);
     // how to grab h2 and display student name
-    document.querySelector("#display > h2").innerHTML = name;
-    // let h2 = document.querySelector("#display > h2");
+    document.querySelector("#display > h2").innerHTML = name; // let h2 = document.querySelector("#display > h2");
     // h2.innerHTML = name;
     document.querySelector("#display > p").innerHTML = name + " is studying " + program;
 }
